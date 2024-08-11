@@ -173,42 +173,6 @@ STATUS: deployed
 REVISION: 1
 TEST SUITE: None
 
-Listing releases matching ^kanban-ui$
-kanban-ui	default  	1       	2020-04-11 19:39:41.082768248 +0200 CEST	deployed	app-0.1.0	1.16.0     
-
-Release "kanban-app" does not exist. Installing it now.
-NAME: kanban-app
-LAST DEPLOYED: Sat Apr 11 19:39:41 2020
-NAMESPACE: default
-STATUS: deployed
-REVISION: 1
-TEST SUITE: None
-
-Listing releases matching ^kanban-app$
-Release "adminer" does not exist. Installing it now.
-NAME: adminer
-LAST DEPLOYED: Sat Apr 11 19:39:41 2020
-NAMESPACE: default
-STATUS: deployed
-REVISION: 1
-TEST SUITE: None
-
-Listing releases matching ^adminer$
-kanban-app	default  	1       	2020-04-11 19:39:41.115007764 +0200 CEST	deployed	app-0.1.0	1.16.0     
-
-Release "postgres" does not exist. Installing it now.
-NAME: postgres
-LAST DEPLOYED: Sat Apr 11 19:39:41 2020
-NAMESPACE: default
-STATUS: deployed
-REVISION: 1
-TEST SUITE: None
-
-Listing releases matching ^postgres$
-adminer	default  	1       	2020-04-11 19:39:41.096703774 +0200 CEST	deployed	app-0.1.0	1.16.0     
-
-postgres	default  	1       	2020-04-11 19:39:41.104092113 +0200 CEST	deployed	postgres-0.1.0	1.16.0     
-
 Release "ingress" does not exist. Installing it now.
 NAME: ingress
 LAST DEPLOYED: Sat Apr 11 19:39:41 2020
