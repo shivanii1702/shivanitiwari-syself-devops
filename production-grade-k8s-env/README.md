@@ -22,10 +22,11 @@ Health Checks: Configure health checks on port 6443 to monitor the master nodes'
 2. Set Up Kubernetes Cluster on AWS
 Install Kubernetes and Container Runtime
 i. Disable Swap
-
+```
+bash
 swapoff -a
 sudo sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
-
+```
 Ii. Install Container Runtime (containerd)
 Iii. Install and configure containerd on all EC2 instances (masters and workers).
 Iv. Enable IPv4 packet forwarding:
