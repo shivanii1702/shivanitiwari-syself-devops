@@ -24,7 +24,7 @@ And here is a simplified schema of what I would like to achieve:
 ![Simple Architecture Diagram](https://github.com/wkrzywiec/k8s-helm-helmfile/blob/master/assets/arch-simple.png)
 
 
-On it you there is an additional component - Adminer. Adminer (formerly phpMinAdmin) is a full-featured database management tool written in PHP. It's GUI application for managing the database.
+On it, there is an additional component - Adminer. Adminer (formerly phpMinAdmin) is a full-featured database management tool written in PHP. It's GUI application for managing the database.
 
 A full picture of Kubernetes cluster that is created with each approach is presented below:
 
