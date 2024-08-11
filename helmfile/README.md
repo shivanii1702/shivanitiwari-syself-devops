@@ -165,24 +165,7 @@ Upgrading release=adminer, chart=charts/app
 Upgrading release=kanban-ui, chart=charts/app
 Upgrading release=kanban-app, chart=charts/app
 Upgrading release=ingress, chart=charts/ingress
-Release "kanban-ui" does not exist. Installing it now.
-NAME: kanban-ui
-LAST DEPLOYED: Sat Apr 11 19:39:41 2020
-NAMESPACE: default
-STATUS: deployed
-REVISION: 1
-TEST SUITE: None
 
-Release "ingress" does not exist. Installing it now.
-NAME: ingress
-LAST DEPLOYED: Sat Apr 11 19:39:41 2020
-NAMESPACE: default
-STATUS: deployed
-REVISION: 1
-TEST SUITE: None
-
-Listing releases matching ^ingress$
-ingress	default  	1       	2020-04-11 19:39:41.11613135 +0200 CEST	deployed	ingress-0.1.0	1.16.0     
 
 
 UPDATED RELEASES:
