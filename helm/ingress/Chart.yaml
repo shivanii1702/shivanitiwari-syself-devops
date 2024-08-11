@@ -8,10 +8,10 @@ keywords:
   - ingress
   - nginx
   - api-gateway
-home: https://github.com/wkrzywiec/k8s-helm-helmfile/tree/master/helm
+home: https://github.com/shivanii1702/shivanitiwari-syself-devops
 maintainers:
-  - name: Wojtek Krzywiec
-    url: https://github.com/wkrzywiec
+  - name: Shivani Tiwari
+    url: https://github.com/shivanii1702/shivanitiwari-syself-devops
 dependencies:
   - name: nginx-ingress
     version: 1.36.0
