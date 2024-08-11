@@ -122,83 +122,54 @@ Downloading nginx-ingress from repo https://kubernetes-charts.storage.googleapis
 Deleting outdated charts
 ```
 
-## Create helm releases
+$ helm create postgres
+Creating postgres
 
-Here is the list of commands that needs to be executed to deploy applications on the cluster. 
-
-### Postgres
-
-```bash
 $ helm install -f kanban-postgres.yaml postgres ./postgres
 NAME: postgres
-LAST DEPLOYED: Fri Apr 10 22:42:44 2020
+LAST DEPLOYED: Sat Aug 10 14:47:19 2024
 NAMESPACE: default
 STATUS: deployed
 REVISION: 1
 TEST SUITE: None
-```
 
-### Adminer
-
-```bash
 $ helm install -f adminer.yaml adminer ./app
 NAME: adminer
-LAST DEPLOYED: Fri Apr 10 22:43:19 2020
+LAST DEPLOYED: Sat Aug 10 14:53:38 2024
 NAMESPACE: default
 STATUS: deployed
 REVISION: 1
 TEST SUITE: None
-```
 
-### Kanban-app
-
-```bash
 $ helm install -f kanban-app.yaml kanban-app ./app
 NAME: kanban-app
-LAST DEPLOYED: Fri Apr 10 22:43:45 2020
+LAST DEPLOYED: Sat Aug 10 14:53:45 2024
 NAMESPACE: default
 STATUS: deployed
 REVISION: 1
 TEST SUITE: None
-```
 
-### Kanban-ui
-
-```bash
-$ helm install -f kanban-ui.yaml kanban-ui ./app
+$  helm install -f kanban-ui.yaml kanban-ui ./app
 NAME: kanban-ui
-LAST DEPLOYED: Fri Apr 10 22:44:16 2020
+LAST DEPLOYED: Sat Aug 10 14:53:52 2024
 NAMESPACE: default
 STATUS: deployed
 REVISION: 1
 TEST SUITE: None
-```
 
-### Ingress
-
-```bash
-$ helm install -f ingress.yaml ingress ./ingress
-NAME: ingress
-LAST DEPLOYED: Fri Apr 10 22:44:42 2020
-NAMESPACE: default
-STATUS: deployed
-REVISION: 1
-TEST SUITE: None
-```
-
-## Maintanance
-
-In order to check the list of Helm releases:
-
-```bash
 $ helm list
-NAME      	NAMESPACE	REVISION	UPDATED             STATUS  	CHART         	APP VERSION
-adminer   	default  	1       	2020-04-10 22:43:19	deployed	app-0.1.0     	1.16.0     
-ingress   	default  	1       	2020-04-10 22:44:42	deployed	ingress-0.1.0 	1.16.0     
-kanban-app	default  	1       	2020-04-10 22:43:45	deployed	app-0.1.0     	1.16.0     
-kanban-ui 	default  	1       	2020-04-10 22:44:16 deployed	app-0.1.0     	1.16.0     
-postgres  	default  	1       	2020-04-10 22:42:44	deployed	postgres-0.1.0	1.16.0 
-```
+NAME      	NAMESPACE	REVISION	UPDATED                                	STATUS  	CHART         	APP VERSION
+adminer   	default  	1       	2024-08-10 14:53:38.154833237 +0530 IST	deployed	app-0.1.0     	1.16.0     
+kanban-app	default  	1       	2024-08-10 14:53:45.680596323 +0530 IST	deployed	app-0.1.0     	1.16.0     
+kanban-ui 	default  	1       	2024-08-10 14:53:52.615454729 +0530 IST	deployed	app-0.1.0     	1.16.0     
+postgres  	default  	1       	2024-08-10 14:47:19.782779685 +0530 IST	deployed	postgres-0.1.0	1.16.0     
+
+$ kubectl get deployments
+NAME         READY   UP-TO-DATE   AVAILABLE   AGE
+adminer      1/1     1            1           33s
+kanban-app   1/1     1            1           26s
+kanban-ui    1/1     1            1           19s
+postgres     1/1     1            1           6m52s
 
 To update the release just replace the `install` key word in a command with `upgrade`, e.g.: 
 
